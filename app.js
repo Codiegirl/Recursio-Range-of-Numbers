@@ -12,14 +12,16 @@ function rangeOfNumbers(startNum, endNum) {
 
 
   //Only change code below this line
-function countdown(myArray, n){
-    if (n <= 0){
-      return [n]
+  function countdown(n){
+    if (n < 1){
+      return []
     } else {
-      myArray.push(n)
-      countdown(myArray, n - 1)
       
+      var newArray = countdown(n - 1)
+      newArray.unshift(n)
+      return newArray
       
     }
     
   }
+  
